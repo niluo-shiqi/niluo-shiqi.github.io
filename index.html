@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>APOD slideshow from the last 7 days!</title>
+    </head>
+    <body>
+
+        <div style="text-align:center">
+            <h2>Pretty Pictures of Our Universe</h2>
+            <p>Drag the image to its matching poem!</p>
+        </div>
+        
+        <div class="game-container">
+            <div class="images">
+                <div class="image-container"><img id="pic1" style="width:100%"  draggable="true" ondragstart="drag(event)"></div>
+                <div class="image-container"><img id="pic2" style="width:100%"  draggable="true" ondragstart="drag(event)"></div>
+                <div class="image-container"><img id="pic3" style="width:100%"  draggable="true" ondragstart="drag(event)"></div>
+                <div class="image-container"><img id="pic4" style="width:100%"  draggable="true" ondragstart="drag(event)"></div>
+            </div>
+            <div class="poems">
+                <div class="poem-container" id="poem1">
+                    <div class="poem-image-slot" id="slot1" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+                    <div class="poem-text" id="cap1">Generating poem...</div>
+                </div>
+                <div class="poem-container" id="poem2">
+                    <div class="poem-image-slot" id="slot2" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+                    <div class="poem-text" id="cap2">Generating poem...</div>
+                </div>
+                <div class="poem-container" id="poem3">
+                    <div class="poem-image-slot" id="slot3" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+                    <div class="poem-text" id="cap3">Generating poem...</div>
+                </div>
+                <div class="poem-container" id="poem4">
+                    <div class="poem-image-slot" id="slot4" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+                    <div class="poem-text" id="cap4">Generating poem...</div>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button id="shadow__btn" class="shadow__btn" onclick="checkMatches()">Submit</button>
+            <span id="error-message" class="error-message">Try Again</span>
+
+        </div>
+ 
+        
+     
+           
+        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+        <script src="script.js" defer></script>
+    </body>
+</html>
